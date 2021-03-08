@@ -1,0 +1,24 @@
+
+<div class="form-style-5"  >
+
+    <h2 class="section-title">Registration</h2>
+    <form name="skillForm" ng-submit="loginCtrl.reg()" ng-class="loginCtrl.show ? '' : 'hide'">
+        <div class="input-skill">
+            <label>Login:</label>
+            <input ng-model="loginCtrl.user.username" type="text" placeholder="Enter name" maxlength="100"
+                   required="required"/>
+
+        </div>
+        <div class="input-password">
+            <label>Password:</label>
+            <input ng-model="loginCtrl.user.password" type="password" min="6" max="100" placeholder="Enter  password"
+                   required="required"/>
+        </div>
+        <div class="input-password">
+            <label>Confirm Password:</label>
+            <input ng-model="loginCtrl.user.confirmPassword" type="password" min="6" max="100" placeholder="Confirm password"
+                   required="required"/>
+        </div>
+        <input type="submit" value="Registration" class="submit"/>
+    </form>
+</div>

@@ -1,0 +1,22 @@
+
+<div ng-mouseenter="options=true" ng-mouseleave="options=false"  class="form-style-5" >
+
+    <h2 class="section-title">Login</h2>
+    <form name="skillForm" ng-submit="skillForm.$valid && loginCtrl.login()" ng-class="loginCtrl.show ? '' : 'hide'">
+        <div class="input-skill">
+            <label>Login:</label>
+            <input ng-model="loginCtrl.user.name" type="text" placeholder="Enter name" maxlength="100"
+                   required="required"/>
+
+        </div>
+        <div class="input-password">
+            <label>Password:</label>
+            <input ng-model="loginCtrl.user.password" type="password" min="6" max="100" placeholder="Enter password"
+                   required="required"/>
+        </div>
+        <input type="submit" value="Login" class="submit"/>
+    </form>
+    <a ui-sref=".reg" class="btn btn-danger">Registration</a>
+</div>
+
+<div ui-view></div>

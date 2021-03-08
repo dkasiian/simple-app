@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/resources/css/app.css" rel="stylesheet">
+    <script src="/resources/angular/angular.min.js"></script>
+    <script src="/resources/angular/angular-ui-router.min.js"></script>
+    <script src="/resources/js/app/app.js"></script>
+    <script src="/resources/js/login/login.controller.js"></script>
+</head>
+<body ng-app="myApp">
+<nav >
+    <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="#">I love CDP</a>
+    </div>
+    <ul>
+        <li><a href="#" ui-sref-active="active"  ui-sref="home">Home</a></li>
+        <li><a href="#" ui-sref-active="active"  ui-sref="about">About</a></li>
+        <li style="float:right"><a href="#" ui-sref="login" ui-sref-active="active">Login</a></li>
+    </ul>
+</nav>
+
+
+
+<!-- MAIN CONTENT -->
+<div id="container" class="container">
+
+    <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+    <div ui-view></div>
+
+</div>
+
+</body>
+</html>

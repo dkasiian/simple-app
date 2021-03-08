@@ -1,0 +1,31 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'com.dkasiian'
+version = '1.0-SNAPSHOT'
+
+description = """"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+
+
+repositories {
+        
+     maven { url "https://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'2.4.3'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version:'2.4.3'
+    compile group: 'com.google.guava', name: 'guava', version:'19.0'
+	compile group: 'javax.validation', name: 'validation-api', version:'2.0.1.Final'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version:'2.12.2'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version:'2.12.2'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version:'2.12.2'
+    runtime group: 'com.h2database', name: 'h2', version:'1.4.200'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version:'1.18.18'
+}
