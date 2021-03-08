@@ -6,8 +6,8 @@ version = '1.0-SNAPSHOT'
 
 description = """"""
 
-war {
-    enabled=true
+plugins {
+    id 'war'
 }
 
 sourceCompatibility = 1.8
