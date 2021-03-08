@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'maven'
+apply plugin: 'war'
 
 group = 'com.dkasiian'
 version = '1.0-SNAPSHOT'
@@ -12,7 +13,7 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-tasks.withType(Jar) {
+tasks.withType(War) {
     destinationDir = file("$rootDir/target")
 }
 
